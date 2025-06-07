@@ -6,7 +6,7 @@ import os
 import subprocess  # GPU名を取得するために追加
 import json  # 設定ファイルを読み込むために追加
 from pose_estimator import get_pose_image, set_mediapipe_device  # 新しい関数をインポート
-from udp_sender import send_udp_data
+from udp_sender import send_data  # 修正された関数名をインポート
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -16,9 +16,11 @@ class MainWindow(QMainWindow):
             config = json.load(config_file)
 
         self.vcam_offset = config["vcam_offset"]  # VCAMオフセットを設定
+        self.ip = config["ip"]  # IPを設定
+        self.port = config["port"]  # ポートを設定
         self.camera_list_path = os.path.join(os.path.dirname(__file__), "../camera_list.txt")
         super().__init__()
-        self.setWindowTitle("MediapipeSender")
+        self.setWindowTitle("Pose Sender App")
         self.image_label = QLabel()
         self.camera_button = QPushButton("Start Camera")
         self.video_button = QPushButton("Open Video")
@@ -162,7 +164,7 @@ class MainWindow(QMainWindow):
         
         # 処理用の画像
         pose_frame, pose_data, expression_data, hand_data, fingertip_data = get_pose_image(frame)  # 指先データを取得
-        send_udp_data(pose_data, expression_data, hand_data, fingertip_data)  # 指先データを送信
+        send_data(pose_data, expression_data, hand_data, fingertip_data)  # 修正された関数を使用
 
         # 表示用の画像（左右反転とサイズ変更）
         flipped_frame = cv2.flip(pose_frame, 1)
