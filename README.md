@@ -17,7 +17,7 @@ MediapipeSenderは、MediaPipeを使用してデータを処理し、他のシ�
 ## インストール
 1. このリポジトリをクローンします:
    ```bash
-   git clone https://github.com/yourusername/MediapipeSender.git
+   git clone https://github.com/Kazuki-87/MediapipeSender.git
    cd MediapipeSender
    ```
 
