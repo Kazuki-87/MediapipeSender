@@ -79,5 +79,5 @@ MediapipeSenderは、MediaPipeを使用してデータを処理し、他のシ�
 4. プルリクエストを送信します。
 
 ## 問い合わせ
-質問やサポートが必要な場合は、以下のメールアドレスまでご連絡ください:
-- your.email@example.com
+質問やサポートが必要な場合は、以下のXまでご連絡ください:
+- https://x.com/cure_kazuki
