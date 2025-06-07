@@ -18,7 +18,7 @@ class MainWindow(QMainWindow):
         self.vcam_offset = config["vcam_offset"]  # VCAMオフセットを設定
         self.camera_list_path = os.path.join(os.path.dirname(__file__), "../camera_list.txt")
         super().__init__()
-        self.setWindowTitle("Pose Sender App")
+        self.setWindowTitle("MediapipeSender")
         self.image_label = QLabel()
         self.camera_button = QPushButton("Start Camera")
         self.video_button = QPushButton("Open Video")
