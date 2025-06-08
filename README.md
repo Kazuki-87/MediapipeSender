@@ -58,9 +58,9 @@ MediapipeSenderは、MediaPipeを使用してデータを処理し、他のシ�
 ```json
 {
     "pose_data": [["PoseLandmark_0", 0.1, 0.2, 0.3], ["PoseLandmark_1", 0.4, 0.5, 0.6]],
-    "expression_data": [[["FaceLandmark_0", 0.1, 0.2, 0.3], ["FaceLandmark_1", 0.4, 0.5, 0.6]]],
-    "hand_data": [[["Left_HandLandmark_0", 0.1, 0.2, 0.3], ["Left_HandLandmark_1", 0.4, 0.5, 0.6]]],
-    "fingertip_data": [[["Left_Fingertip_4", 0.1, 0.2, 0.3], ["Left_Fingertip_8", 0.4, 0.5, 0.6]]]
+    "expression_data": [["FaceLandmark_0", 0.1, 0.2, 0.3], ["FaceLandmark_1", 0.4, 0.5, 0.6]],
+    "hand_data": [["Left_HandLandmark_0", 0.1, 0.2, 0.3], ["Left_HandLandmark_1", 0.4, 0.5, 0.6]],
+    "fingertip_data": [["Left_Fingertip_4", 0.1, 0.2, 0.3], ["Left_Fingertip_8", 0.4, 0.5, 0.6]]
 }
 ```
 
