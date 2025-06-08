@@ -164,7 +164,7 @@ class MainWindow(QMainWindow):
         
         # 処理用の画像
         pose_frame, pose_data, expression_data, hand_data, fingertip_data = get_pose_image(frame)  # 指先データを取得
-        send_data(pose_data, expression_data, hand_data, fingertip_data)  # 修正された関数を使用
+        send_data(pose_data, expression_data[0], hand_data[0], fingertip_data[0])  # 修正された関数を使用
 
         # 表示用の画像（左右反転とサイズ変更）
         flipped_frame = cv2.flip(pose_frame, 1)
